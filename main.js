@@ -60,6 +60,8 @@ client.on('message', message => {
         message.channel.send('I love my Dad!')
     } else if (command == 'help'){
         client.commands.get('help').execute(message, args);
+    } else if (command == 'kick'){
+        client.commands.get('kick').execute(message, args);  
     }
 
 })
