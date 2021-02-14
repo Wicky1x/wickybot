@@ -43,9 +43,8 @@ client.on('ready', () =>{
 });   
 
 client.on('message', message => {
-   
 
-    if (command === 'ping'){
+     if (command === 'ping'){
     client.commands.get('ping').execute(message, args);
     } else if (command == 'youtube'){
         client.commands.get('youtube').execute(message, args);
@@ -68,12 +67,10 @@ client.on('message', message => {
     } else if (command == 'kick'){
         client.commands.get('kick').execute(message, args);  
     } else if (command == 'ban'){
-        client.commands.get('ban').execute(message, args);  
-    } else if (command == 'clear'){
-        client.commands.get('clear').execute(message, args);
-    } else if (command == 'message'){
-        client.commands.get('clear').execute(message, args);
-    }
+ 
+    } 
+        
+    
 });
 
 
