@@ -1,9 +1,23 @@
 const Discord = require('discord.js');
+
 const client = new Discord.Client();
+
 const prefix = '-';
+
 const fs = require ('fs');
 
 client.commands = new Discord.Collection();
+
+
+
+
+client.on('guildMemberAdd', member =>{
+    
+    const channel = member.guild.channels.cache.find(channel => channel.name === "👋welcome");
+    if(!channel) return;
+
+    channel.send(`Welcome to Wicky's Place, ${member}, please read the rules in the rules channel.`)
+});
 
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
@@ -12,39 +26,21 @@ for(const file of commandFiles){
 
     client.commands.set(command.name, command);
 }
-
-client.on('guildMemberAdd', member =>{
-
-      if(command.permissions.length){
-        let invalidPerms = []
-        for(const perm of command.permissions){
-          if(!validPermissions.includes(perm)){
-            return console.log(`Invalid Permissions ${perm}`);
-          }
-          if(!Message.member.hasPermission(perm)){
-            invalidPerms.push(perm);
-            break;
-          }
-        }
-        if (invalidPerms.length){
-          return Message.channel.send(`Missing Permissions: ${invalidPerms}`);
-        }
-      }
-       
-    const channel = member.guild.channels.cache.find(channel => channel.name === "👋welcome");
-    if(!channel) return;
-
-    channel.send(`Welcome to Wicky's Place, ${member}, please read the rules in the rules channel.`)
-});
     
-client.on('ready', () =>{ 
-    console.log('Wicky Knight is online!');
-    client.user.setActivity(`Wicky1x on Youtube`, {type: 'WATCHING'}) // PLAYING, WATCHING,  
+client.once('ready', () =>{ 
+console.log('Wicky Knight is online!');
+client.user.setActivity(`Wicky1x on Youtube`, {type: 'WATCHING'}) // PLAYING, WATCHING,  
+
 });   
 
-client.on('message', message => {
 
-     if (command === 'ping'){
+client.on('message', message => {
+    if(!message.content.startsWith(prefix) || message.author.bot) return;
+
+    const args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+
+    if (command === 'ping'){
     client.commands.get('ping').execute(message, args);
     } else if (command == 'youtube'){
         client.commands.get('youtube').execute(message, args);
@@ -64,14 +60,9 @@ client.on('message', message => {
         message.channel.send('I love my Dad!')
     } else if (command == 'help'){
         client.commands.get('help').execute(message, args);
-    } else if (command == 'kick'){
-        client.commands.get('kick').execute(message, args);  
-    } else if (command == 'ban'){
- 
-    } 
-        
-    
-});
+    }
+
+})
 
 
 client.login('ODA4MzQ5ODIxNjI1ODI3MzI4.YCFQbw.PyWqw2gO1g1E221QiF29B-EOtbc');
