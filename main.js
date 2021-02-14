@@ -3,6 +3,10 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 const prefix = '-';
+const memberCounter = require('./counters/member-counter');
+
+
+
 
 const fs = require ('fs');
 
@@ -12,6 +16,10 @@ client.commands = new Discord.Collection();
 
 
 client.on('guildMemberAdd', member =>{
+    
+     memberCounter(client);   
+    
+    
     
     const channel = member.guild.channels.cache.find(channel => channel.name === "👋welcome");
     if(!channel) return;
