@@ -70,7 +70,11 @@ client.on('message', message => {
         client.commands.get('help').execute(message, args);
     } else if (command == 'kick'){
         client.commands.get('kick').execute(message, args);
+    }else if (command == 'member-counter'){
+        client.commands.get('member-counter').execute(message, args);
     }
+
+    
 
     
 
