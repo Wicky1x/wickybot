@@ -36,8 +36,9 @@ for(const file of commandFiles){
 }
     
 client.once('ready', () =>{ 
-console.log('Wicky Knight is online!');
-client.user.setActivity(`Wicky1x on Youtube`, {type: 'WATCHING'}) // PLAYING, WATCHING,  
+    console.log('Wicky Knight is online!');
+    memberCounter(client);
+    client.user.setActivity(`Wicky1x on Youtube`, {type: 'WATCHING'}) // PLAYING, WATCHING,  
 
 });   
 
