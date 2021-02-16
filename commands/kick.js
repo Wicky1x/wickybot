@@ -1,10 +1,9 @@
 module.exports ={
     name: 'kick',
     description: "This cammand kicks a member!",
+ permissions: ["ADMINISTRATOR","MANAGE_CHANNELS"],   
     
-    
-    
-    execute(message, args){
+ execute(message, args){
       const member = message.mentions.users.first();
          
 
