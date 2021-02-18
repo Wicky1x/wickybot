@@ -3,7 +3,7 @@ module.exports ={
     description: "This cammand kicks a member!",
  permissions: ["ADMINISTRATOR","MANAGE_CHANNELS"],   
     
- execute(client,message, args){
+ execute(client,message, args,Discord){
       const member = message.mentions.users.first();
          
 
