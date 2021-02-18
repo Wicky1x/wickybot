@@ -1,11 +1,9 @@
 const Discord = require('discord.js');
 
 const client = new Discord.Client();
-
-const prefix = '-';
 const memberCounter = require('./counters/member-counter');
 
-
+// //     client.user.setActivity(`Wicky1x on Youtube`, {type: 'WATCHING'}) // PLAYING, WATCHING,
 
 
 const fs = require ('fs');
@@ -16,6 +14,7 @@ client.events = new Discord.Collection();
     require(`./handlers/${handler}`)(client, Discord);
 })
 
+// //     client.user.setActivity(`Wicky1x on Youtube`, {type: 'WATCHING'}) // PLAYING, WATCHING, 
 
 
 
