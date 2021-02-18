@@ -12,11 +12,8 @@ client.events = new Discord.Collection();
 })
 
 
-client.once('ready', () =>{ 
-     console.log('Wicky Knight is online!');
-     memberCounter(client);
-     client.user.setActivity(`Wicky1x on Youtube`, {type: 'WATCHING'}) // PLAYING, WATCHING,  
-})
+
+
 
 client.on('guildMemberAdd', member =>{
     memberCounter(client);   
