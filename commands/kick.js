@@ -6,7 +6,7 @@ module.exports = {
     execute(client, message, args, Discord) {
         const member = message.mentions.users.first();
 
-        if (message.member.roles.cache.has('786638250243653662')) {
+        if (message.member.roles.cache.has('812077359300608020')) {
             if (member) {
                 const memberTarger = message.guild.members.cache.get(member.id);
                 memberTarger.kick();
@@ -16,7 +16,7 @@ module.exports = {
             }
 
         } else {
-            message.channel.send('You can not send this command because you do not have the right')
+            message.channel.send('You can not send this command because you do not have the right permisions.')
         }
     }
 

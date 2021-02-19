@@ -1,13 +1,19 @@
+const Discord = require('discord.js');
 module.exports = {
     name: 'pp',
-    description: "this is a pp command!",
-    execute(client,message, args,Discord){
-    const newEmbed = new Discord.MessageEmbed()
-    .setColor('#c6e2ff')
-    .setTitle('Pp Size')
-    .setURL('')
-    .setDescription(`${message.author} Your pp size is 8======D`)
+    aliases: ['pp'],
+    description: "this command send your penis size!",
+    execute(client, message, args, Discord) {
 
-    message.channel.send(newEmbed);
-    }
-} 
+    
+        const penis = ["8D","8=D","8==D","8D","8=====D","8=====D","You have to have a penis to calculate","8==========D"]
+        const penisrate = penis[Math.floor(Math.random() * penis.length)]
+
+        const penisEmbed = new Discord.MessageEmbed()
+        .setColor('RANDOM')
+        .setTitle("Pp Calculator")
+        .setDescription(`${message.author.username}'s penis  
+        ${penisrate} `)
+
+        message.channel.send(penisEmbed);
+    }}
