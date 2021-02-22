@@ -13,6 +13,7 @@ module.exports = {
            {name: '-Twitch', value: 'This command will show you my Twitch channel.'},
            {name: '-Ping', value: 'This command will make the bot reply Pong!'},
            {name: '-Invite', value: 'This command will give you a link to invite my bot.'},
+           {name: '-play', value: 'This command will play whatever song you want!'},
            )
         .setFooter('Hope this helped you.');
        
