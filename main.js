@@ -23,4 +23,4 @@ client.on('guildMemberAdd', member =>{
 })
 
 
-client.login('ODA4MzQ5ODIxNjI1ODI3MzI4.YCFQbw.PyWqw2gO1g1E221QiF29B-EOtbc');
+client.login(process.env.DISCORD_TOKEN);
