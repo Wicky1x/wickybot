@@ -12,6 +12,7 @@
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
     "fs": "0.0.1-security",
+    "mongoose": "^5.11.18",
     "opusscript": "0.0.7",
     "random-puppy": "^1.1.0",
     "reconlx": "^1.1.2",

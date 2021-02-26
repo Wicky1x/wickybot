@@ -24,5 +24,7 @@ module.exports = {
        
        message.channel.send(newEmbed);
 
+       message.delete()
+
     }
 } 

@@ -33,6 +33,7 @@ module.exports = {
 
 
         message.channel.send(weatherinfo)
+        message.delete()
         })        
     }
 }
