@@ -8,7 +8,7 @@ module.exports = {
        .setURL('')
        .setDescription('My prefix on this server is -')
        .addFields(
-           {name: '-PP', value: 'This command will give you and acreate size of you PP.'},
+           {name: '-PP', value: 'This command will give you and acreate size of you PP.'}, 
            {name: '-Youtube', value: 'This command will show you my Youtube channel.'},
            {name: '-Twitch', value: 'This command will show you my Twitch channel.'},
            {name: '-Ping', value: 'This command will make the bot reply Pong!'},
