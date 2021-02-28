@@ -16,6 +16,11 @@ module.exports = {
         },
       }
     );
-    return message.channel.send(`${message.author.username}, you begged and received ${randomNumber} **coins**`);
+    
+    const newEmbed = new Discord.MessageEmbed()
+      .setColor('#d12828')
+      .setDescription((`${message.author.username}, you begged and received ${randomNumber} **coins**`))
+
+      message.channel.send(newEmbed);
   },
 };
