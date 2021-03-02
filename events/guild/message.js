@@ -1,6 +1,7 @@
 require('dotenv').config();
 const profileModel = require("../../models/profileSchema");
 module.exports = async (Discord, client, message) =>{
+    
     const prefix = process.env.PREFIX;
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 

@@ -14,6 +14,8 @@ module.exports = {
            {name: '-Ping', value: 'This command will make the bot reply Pong!'},
            {name: '-Invite', value: 'This command will give you a link to invite my bot.'},
            {name: '-Play', value: 'This command will play whatever song you want!'},
+           {name: '-Play', value: 'This command will play whatever song you want!'},
+           {name: '-Play', value: 'This command will play whatever song you want!'},
            )
         .setFooter('Hope this helped you.');
        
