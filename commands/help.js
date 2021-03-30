@@ -9,11 +9,22 @@ module.exports = {
        .setURL('')
        .setDescription('My prefix on this server is -')
        .addFields(
+
            {name: ':hammer:Mod', value: '`-help-mod`'},           
            
            {name: ':moneybag:Economy', value: '`-help Economy`'},  
            
            {name: ':laughing:Fun', value: '`-help-fun`'},           {name: 'Support Server', value: '`-invite`'}, 
+
+           {name: '-PP', value: 'This command will give you and acreate size of you PP.'}, 
+           {name: '-Youtube', value: 'This command will show you my Youtube channel.'},
+           {name: '-Twitch', value: 'This command will show you my Twitch channel.'},
+           {name: '-Ping', value: 'This command will make the bot reply Pong!'},
+           {name: '-Invite', value: 'This command will give you a link to invite my bot.'},
+           {name: '-Play', value: 'This command will play whatever song you want!'},
+           {name: '-Play', value: 'This command will play whatever song you want!'},
+           {name: '-Play', value: 'This command will play whatever song you want!'},
+
            )
         .setFooter('Hope this helped you.');
        
