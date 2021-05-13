@@ -9,6 +9,7 @@
   "author": "Wicky",
   "license": "ISC",
   "dependencies": {
+    "discord-xp": "^1.1.10",
     "discord.js": "^12.5.1",
     "dotenv": "^8.2.0",
     "fs": "0.0.1-security",
